@@ -1,0 +1,23 @@
+typedef struct entity_list{
+    char entity[100];
+    struct entity_list* next;
+    char entity2[100];
+    char file[50];
+} entity_list;
+void print_mode(int mode);
+void print_owner(int uid);
+void print_group(int st_gid);
+void print_date(size_t* mtime);
+void ls(char *ptr, int i );
+char* generate_prompt(char prompt[200]);
+char* read_word(char word[],char ptr[],int* i);
+int if_positive_number(char ptr[]);
+void print_time(int time);
+void hrs_min(int time);
+char* ps_tty(char tty[],char processid[]);
+void ps(char* ptr, int i);
+void free_everything(entity_list* head);
+int isDir(const char* fileName);
+void cp(char ptr[],int i);
+void mv(char ptr[],int i);
+void grep(char ptr[],int i);
